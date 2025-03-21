@@ -116,6 +116,9 @@ internal extension OKHTTPClient {
                     .setFailureType(to: Error.self)
                     .eraseToAnyPublisher()
             }
+            .handleEvents(receiveCancel: {
+                task.cancel()
+            })
             .eraseToAnyPublisher()
     }
 }

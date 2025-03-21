@@ -146,9 +146,6 @@ private extension OKHTTPClient {
                 switch character {
                 case "{":
                     nestingDepth += 1
-                    if nestingDepth == 1 {
-                        objectStartIndex = index
-                    }
                 case "}":
                     nestingDepth -= 1
                     if nestingDepth == 0 {

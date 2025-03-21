@@ -134,8 +134,8 @@ private extension OKHTTPClient {
         var isEscaped = false
         var isWithinString = false
         var nestingDepth = 0
-        var objectStartIndex = buffer.startIndex
-        
+        let objectStartIndex = buffer.startIndex
+
         for (index, byte) in buffer.enumerated() {
             let character = Character(UnicodeScalar(byte))
             
